@@ -1,2 +1,10 @@
 rootProject.name = 'trader'
+include 'web'
+include 'client'
+include 'common'
+include 'pluginImpls'
+include 'pluginImpls:daskPlugin'
+findProject(':pluginImpls:daskPlugin')?.name = 'daskPlugin'
+include 'pluginImpls:whitePlugin'
+findProject(':pluginImpls:whitePlugin')?.name = 'whitePlugin'
 

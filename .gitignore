@@ -3,3 +3,4 @@ build/
 tars/
 .gradle/
 gradle/
+.DS_Store
