@@ -4,3 +4,4 @@ tars/
 .gradle/
 gradle/
 .DS_Store
+web/out
