@@ -1,5 +1,8 @@
 plugins {
     id 'war'
+    id 'java'
+    id 'org.springframework.boot' version '2.1.18.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 }
 
 group 'com.longnd'
@@ -12,6 +15,15 @@ repositories {
 }
 
 dependencies {
+
     compile 'javax.servlet:javax.servlet-api:3.1.0'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'junit:junit:4.12'
+    implementation ('org.springframework.boot:spring-boot-starter-web') {
+        exclude module : 'spring-boot-starter-logging'
+    }
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+//    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '0.9.26'
 }
