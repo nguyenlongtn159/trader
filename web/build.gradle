@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
 
-    compile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'javax.servlet:javax.servlet-api:4.0.0'
     testImplementation 'junit:junit:4.12'
     implementation ('org.springframework.boot:spring-boot-starter-web') {
         exclude module : 'spring-boot-starter-logging'
@@ -26,4 +26,9 @@ dependencies {
     }
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
 //    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '0.9.26'
+    
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.3.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.3.4.RELEASE'
+
 }

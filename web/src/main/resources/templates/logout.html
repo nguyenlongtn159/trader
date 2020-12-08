@@ -1,0 +1,14 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Login Out</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/css/main.css" th:href="@{/css/main.css}" />
+</head>
+<body>
+<form th:action="@{/logout}" method="post" style="align-content: center">
+    <input type="submit" value="Logout" />
+</form>
+<p><a href="/index" th:href="@{/}">Back to home page</a></p>
+</body>
+</html>
